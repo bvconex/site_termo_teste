@@ -15,11 +15,12 @@
     h2 {
       text-align: center;
       color: #0056b3;
+      font-size: 22px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
+      margin: 15px 0;
       background: #fff;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -29,36 +30,37 @@
     th, td {
       padding: 10px;
       text-align: center;
+      font-size: 16px;
     }
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       margin: 20px 0;
     }
     .buttons button {
       width: 100%;
-      padding: 12px;
-      font-size: 16px;
+      padding: 14px;
+      font-size: 18px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      background: linear-gradient(to right, #007bff, #ff7f00);
+      background: #ff7f00;
       color: white;
       transition: 0.3s ease-in-out;
     }
     .buttons button:hover {
+      background: #e66b00;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      transform: scale(1.05);
     }
     .buttons button.selected {
-      background: #ff7f00;
+      background: #cc5c00;
       border: 2px solid #0056b3;
     }
     .confirm-button {
       width: 100%;
-      padding: 12px;
-      font-size: 16px;
+      padding: 14px;
+      font-size: 18px;
       background: #007bff;
       color: white;
       border: none;
@@ -72,11 +74,27 @@
     }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       margin-top: 40px;
       background: #ff7f00;
       color: white;
       font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        margin: 10px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      table th, table td {
+        font-size: 14px;
+      }
+      .buttons button {
+        font-size: 16px;
+        padding: 12px;
+      }
     }
   </style>
   <script>
@@ -129,7 +147,9 @@
 
   <button class="confirm-button">Confirmar resposta</button>
 
-
+  <footer>
+    © 2025 Banco Inter - Todos os direitos reservados | Contato: suporte@bancointer.com
+  </footer>
 
 </body>
 </html>
