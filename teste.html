@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Declaração de Retenção de Portabilidade de Crédito</title>
+  <style>
+    body {
+      font-family: 'Merriweather', serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    table, th, td {
+      border: 1px solid #007bff;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .buttons button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: linear-gradient(to right, #007bff, #ff7f00);
+      color: white;
+      transition: 0.3s ease-in-out;
+    }
+    .buttons button:hover {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+    }
+    .buttons button.selected {
+      background: #ff7f00;
+      border: 2px solid #0056b3;
+    }
+    .confirm-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .confirm-button:hover {
+      background: #0056b3;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #ff7f00;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    function selecionarOpcao(botao) {
+      const botoes = document.querySelectorAll('.buttons button');
+      botoes.forEach(b => b.classList.remove('selected'));
+      botao.classList.add('selected');
+    }
+  </script>
+</head>
+<body>
+  <h2>DECLARAÇÃO DE RETENÇÃO DE PORTABILIDADE DE CRÉDITO</h2>
+
+  <p>Eu, <strong>Bruno Patriota</strong>, confirmo a retenção do(s) contrato(s) listado(s) abaixo:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Contrato nº</th>
+        <th>Número</th>
+        <th>Valor da parcela</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1234567</td>
+        <td>20250604000001234567</td>
+        <td>R$ 20,50</td>
+      </tr>
+      <tr>
+        <td>7654321</td>
+        <td>20250604000007654321</td>
+        <td>R$ 150,50</td>
+      </tr>
+      <tr>
+        <td>3214567</td>
+        <td>20250604000003214567</td>
+        <td>R$ 70,80</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Escolha uma das opções abaixo:</p>
+
+  <div class="buttons">
+    <button onclick="selecionarOpcao(this)">Eu não solicitei a portabilidade</button>
+    <button onclick="selecionarOpcao(this)">Solicitei a portabilidade, mas desisti do pedido</button>
+    <button onclick="selecionarOpcao(this)">Recebi do(a) Banco Inter uma proposta melhor e desisti de realizar a portabilidade.</button>
+  </div>
+
+  <button class="confirm-button">Confirmar resposta</button>
+
+
+
+</body>
+</html>
