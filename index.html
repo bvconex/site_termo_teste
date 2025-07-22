@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Declaração de Retenção de Portabilidade de Crédito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Merriweather', serif;
@@ -45,17 +46,17 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      background: #ff7f00;
+      background: #6c757d; /* cinza médio */
       color: white;
       transition: 0.3s ease-in-out;
     }
     .buttons button:hover {
-      background: #e66b00;
+      background: #5a6268; /* cinza escuro */
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
     }
     .buttons button.selected {
-      background: #cc5c00;
-      border: 2px solid #0056b3;
+      background: #495057; /* cinza mais escuro */
+      border: 2px solid #0056b3; /* azul para destaque */
     }
     .confirm-button {
       width: 100%;
@@ -76,7 +77,7 @@
       text-align: center;
       padding: 10px;
       margin-top: 30px;
-      background: #ff7f00;
+      background: #6c757d;
       color: white;
       font-size: 12px;
     }
@@ -109,9 +110,10 @@
   <h2>DECLARAÇÃO DE RETENÇÃO DE PORTABILIDADE DE CRÉDITO</h2>
 
   <p>
-    Eu, <strong>Bruno Patriota</strong>, identificado por <strong>Bruno Patriota</strong>, inscrito(a) no CPF/CNPJ sob o nº <strong>98765432100</strong>,
+    Eu, <strong>Bruno Patriota</strong>, inscrito(a) no CPF nº <strong>987.654.321-00</strong>,
     confirmo a retenção pela Instituição <strong>Banco Bradesco</strong> do(s) contrato(s) listado(s) na tabela abaixo e solicitado(s) pelo <strong>Banco BRB</strong>, pelo seguinte motivo:
   </p>
+
   <table>
     <thead>
       <tr>
@@ -141,23 +143,33 @@
 
   <p>Escolha uma opção:</p>
 
- <div class="buttons">
+  <div class="buttons">
     <button onclick="selecionarOpcao(this)">Eu não solicitei a portabilidade</button>
     <button onclick="selecionarOpcao(this)">Solicitei a portabilidade, mas desisti do pedido</button>
     <button onclick="selecionarOpcao(this)">Recebi do(a) Banco Crefisa uma proposta melhor e desisti de realizar a portabilidade.</button>
   </div>
 
   <button class="confirm-button">Confirmar</button>
-<script>
-  document.querySelector('.confirm-button').addEventListener('click', () => {
-    // Aqui pode incluir uma validação para garantir que alguma opção foi selecionada, se quiser
-    const selecionado = document.querySelector('.buttons button.selected');
-    if (!selecionado) {
-      alert('Por favor, selecione uma opção antes de confirmar.');
-      return;
-    }
-    window.location.href = 'confirmacao.html';
-  });
-</script>
+
+  <footer>
+    Declaração gerada eletronicamente — Bruno Patriota © 2025
+  </footer>
+
+  <script>
+    document.querySelector('.confirm-button').addEventListener('click', () => {
+      const selecionado = document.querySelector('.buttons button.selected');
+      if (!selecionado) {
+        alert('Por favor, selecione uma opção antes de confirmar.');
+        return;
+      }
+
+      // Aqui você pode armazenar ou enviar os dados da opção selecionada
+      const motivo = selecionado.textContent;
+      console.log('Motivo selecionado:', motivo);
+
+      // Redirecionamento simulado
+      window.location.href = 'confirmacao.html';
+    });
+  </script>
 </body>
 </html>
